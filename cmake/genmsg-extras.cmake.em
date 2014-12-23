@@ -8,6 +8,14 @@ set(_GENMSG_EXTRAS_INCLUDED_ TRUE)
 # set destination for langs
 set(GENMSG_LANGS_DESTINATION "etc/ros/genmsg")
 
+@[if DEVELSPACE]@
+# bin dir variables in develspace
+set(GENMSG_CHECK_DEPS_SCRIPT "@(CMAKE_CURRENT_SOURCE_DIR)/scripts/genmsg_check_deps.py")
+@[else]@
+# bin dir variables in installspace
+set(GENMSG_CHECK_DEPS_SCRIPT "${genmsg_DIR}/../../../@(CATKIN_PACKAGE_BIN_DESTINATION)/genmsg_check_deps.py")
+@[end if]@
+
 include(CMakeParseArguments)
 
 # find message generators in all workspaces
@@ -75,7 +83,10 @@ macro(add_message_files)
     set(ARG_DIRECTORY "msg")
   endif()
 
-  set(MESSAGE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/${ARG_DIRECTORY})
+  set(MESSAGE_DIR "${ARG_DIRECTORY}")
+  if(NOT IS_ABSOLUTE "${MESSAGE_DIR}")
+    set(MESSAGE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/${MESSAGE_DIR}")
+  endif()
   # override message directory (used by add_action_files())
   if(ARG_BASE_DIR)
     set(MESSAGE_DIR ${ARG_BASE_DIR})
@@ -133,7 +144,10 @@ macro(add_service_files)
     set(ARG_DIRECTORY "srv")
   endif()
 
-  set(SERVICE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/${ARG_DIRECTORY})
+  set(SERVICE_DIR "${ARG_DIRECTORY}")
+  if(NOT IS_ABSOLUTE "${SERVICE_DIR}")
+    set(SERVICE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/${SERVICE_DIR}")
+  endif()
 
   if(NOT IS_DIRECTORY ${SERVICE_DIR})
     message(FATAL_ERROR "add_service_files() directory not found: ${SERVICE_DIR}")
@@ -207,21 +221,17 @@ macro(generate_messages)
   catkin_destinations()
 
   # generate devel space config of message include dirs for project
-  set(DEVELSPACE TRUE)
-  set(INSTALLSPACE FALSE)
   set(PKG_MSG_INCLUDE_DIRS "${${PROJECT_NAME}_MSG_INCLUDE_DIRS_DEVELSPACE}")
-  em_expand(${genmsg_CMAKE_DIR}/pkg-msg-paths.context.in
-    ${CMAKE_CURRENT_BINARY_DIR}/catkin_generated/${PROJECT_NAME}-msg-paths-context.py
-    ${genmsg_CMAKE_DIR}/pkg-msg-paths.cmake.em
-    ${CATKIN_DEVEL_PREFIX}/share/${PROJECT_NAME}/cmake/${PROJECT_NAME}-msg-paths.cmake)
+  configure_file(
+    ${genmsg_CMAKE_DIR}/pkg-msg-paths.cmake.develspace.in
+    ${CATKIN_DEVEL_PREFIX}/share/${PROJECT_NAME}/cmake/${PROJECT_NAME}-msg-paths.cmake
+    @@ONLY)
   # generate and install config of message include dirs for project
-  set(DEVELSPACE FALSE)
-  set(INSTALLSPACE TRUE)
   set(PKG_MSG_INCLUDE_DIRS "${${PROJECT_NAME}_MSG_INCLUDE_DIRS_INSTALLSPACE}")
-  em_expand(${genmsg_CMAKE_DIR}/pkg-msg-paths.context.in
-    ${CMAKE_CURRENT_BINARY_DIR}/catkin_generated/installspace/${PROJECT_NAME}-msg-paths-context.py
-    ${genmsg_CMAKE_DIR}/pkg-msg-paths.cmake.em
-    ${CMAKE_CURRENT_BINARY_DIR}/catkin_generated/installspace/${PROJECT_NAME}-msg-paths.cmake)
+  configure_file(
+    ${genmsg_CMAKE_DIR}/pkg-msg-paths.cmake.installspace.in
+    ${CMAKE_CURRENT_BINARY_DIR}/catkin_generated/installspace/${PROJECT_NAME}-msg-paths.cmake
+    @@ONLY)
   install(FILES ${CMAKE_CURRENT_BINARY_DIR}/catkin_generated/installspace/${PROJECT_NAME}-msg-paths.cmake
     DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/cmake)
 

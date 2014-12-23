@@ -89,7 +89,7 @@ def test_parse_type():
 
 def test_Constant():
     import genmsg.msgs    
-    vals = [random.randint(0, 1000) for i in xrange(0, 3)]
+    vals = [random.randint(0, 1000) for i in range(0, 3)]
     type_, name, val = [str(x) for x in vals]
     x = genmsg.msgs.Constant(type_, name, val, str(val))
     assert type_ == x.type
@@ -137,7 +137,7 @@ def test_MsgSpec():
         assert m.text == text
         assert has_header == m.has_header()
         assert m.constants == constants
-        assert zip(types, names) == m.fields()
+        assert list(zip(types, names)) == m.fields()
         assert m == MsgSpec(types, names, constants, text, full_name)
         return m
     

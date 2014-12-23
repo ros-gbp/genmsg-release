@@ -2,14 +2,35 @@
 Changelog for package genmsg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.4.26 (2014-10-13)
--------------------
+0.5.6 (2014-10-13)
+------------------
 * fix interpreter globals collision with multiple message templates or modules (`#53 <https://github.com/ros/genmsg/issues/53>`_)
 
-0.4.25 (2014-02-25)
--------------------
+0.5.5 (2014-08-18)
+------------------
+* fix CMake syntax (`#52 <https://github.com/ros/genmsg/issues/52>`_) (regression of 0.5.4)
+
+0.5.4 (2014-08-18)
+------------------
+* allow DIRECTORY argument to be an absolute path (`#51 <https://github.com/ros/genmsg/issues/51>`_)
+
+0.5.3 (2014-07-10)
+------------------
+* escape messages to avoid CMake warning (`#49 <https://github.com/ros/genmsg/issues/49>`_)
+
+0.5.2 (2014-05-07)
+------------------
+* refactor to generate pkg-msg-paths.cmake via configure_file() instead of empy (`#43 <https://github.com/ros/genmsg/issues/43>`_)
+* fix python 3 compatibility (`#45 <https://github.com/ros/genmsg/issues/45>`_)
+* remove debug message introduced in 0.5.1 (`#42 <https://github.com/ros/genmsg/issues/42>`_)
+
+0.5.1 (2014-03-04)
+------------------
+* add check for changed message dependencies (`#41 <https://github.com/ros/genmsg/issues/41>`_)
+
+0.5.0 (2014-02-25)
+------------------
 * remove usage of debug_message() (`#40 <https://github.com/ros/genmsg/issues/40>`_)
-* revert "python 3 compatibility" (introduced in 0.4.24)
 
 0.4.24 (2014-01-07)
 -------------------
