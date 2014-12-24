@@ -1,3 +1,24 @@
+## genmsg (jade) - 0.5.6-0
+
+The packages in the `genmsg` repository were released into the `jade` distro by running `/usr/bin/bloom-release -r jade -t jade genmsg` on `Wed, 24 Dec 2014 00:00:46 -0000`
+
+The `genmsg` package was released.
+
+Version of package(s) in repository `genmsg`:
+- upstream repository: git@github.com:ros/genmsg.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `None-0`
+- new version: `0.5.6-0`
+
+Versions of tools used:
+- bloom version: `0.5.16`
+- catkin_pkg version: `0.2.6`
+- rosdep version: `0.11.0`
+- rosdistro version: `0.4.0`
+- vcstools version: `0.1.36`
+
+
 ## genmsg (hydro) - 0.4.26-0
 
 The packages in the `genmsg` repository were released into the `hydro` distro by running `/usr/bin/bloom-release -r hydro -t hydro genmsg` on `Mon, 13 Oct 2014 17:47:29 -0000`
