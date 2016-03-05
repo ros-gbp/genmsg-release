@@ -1,4 +1,4 @@
-!!python/unicode 'release_repo_url': git@github.com:ros-gbp/genmsg-release.git
+release_repo_url: git@github.com:ros-gbp/genmsg-release.git
 tracks:
   groovy:
     actions:
