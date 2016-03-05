@@ -1,3 +1,24 @@
+## genmsg (kinetic) - 0.5.7-0
+
+The packages in the `genmsg` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release -r kinetic -t kinetic genmsg` on `Sat, 05 Mar 2016 00:34:43 -0000`
+
+The `genmsg` package was released.
+
+Version of package(s) in repository `genmsg`:
+- upstream repository: git@github.com:ros/genmsg.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `None-0`
+- new version: `0.5.7-0`
+
+Versions of tools used:
+- bloom version: `0.5.20`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.4`
+- rosdistro version: `0.4.4`
+- vcstools version: `0.1.38`
+
+
 ## genmsg (jade) - 0.5.7-0
 
 The packages in the `genmsg` repository were released into the `jade` distro by running `/usr/bin/bloom-release -r jade -t jade genmsg` on `Sat, 05 Mar 2016 00:30:27 -0000`
