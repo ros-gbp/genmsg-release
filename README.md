@@ -1,3 +1,26 @@
+## genmsg (lunar) - 0.5.8-0
+
+The packages in the `genmsg` repository were released into the `lunar` distro by running `/usr/bin/bloom-release -r lunar -t lunar genmsg` on `Thu, 16 Feb 2017 18:04:23 -0000`
+
+The `genmsg` package was released.
+
+Version of package(s) in repository `genmsg`:
+
+- upstream repository: git@github.com:ros/genmsg.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `None-0`
+- new version: `0.5.8-0`
+
+Versions of tools used:
+
+- bloom version: `0.5.23`
+- catkin_pkg version: `0.3.1`
+- rosdep version: `0.11.5`
+- rosdistro version: `0.5.0`
+- vcstools version: `0.1.39`
+
+
 ## genmsg (kinetic) - 0.5.8-0
 
 The packages in the `genmsg` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release -r kinetic -t kinetic genmsg` on `Fri, 02 Sep 2016 18:18:01 -0000`
