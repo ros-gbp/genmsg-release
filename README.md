@@ -1,3 +1,26 @@
+## genmsg (jade) - 0.5.8-0
+
+The packages in the `genmsg` repository were released into the `jade` distro by running `/usr/bin/bloom-release -r jade -t jade genmsg` on `Mon, 06 Mar 2017 16:00:03 -0000`
+
+The `genmsg` package was released.
+
+Version of package(s) in repository `genmsg`:
+
+- upstream repository: git@github.com:ros/genmsg.git
+- release repository: https://github.com/ros-gbp/genmsg-release.git
+- rosdistro version: `0.5.7-0`
+- old version: `0.5.7-0`
+- new version: `0.5.8-0`
+
+Versions of tools used:
+
+- bloom version: `0.5.24`
+- catkin_pkg version: `0.3.1`
+- rosdep version: `0.11.5`
+- rosdistro version: `0.6.1`
+- vcstools version: `0.1.39`
+
+
 ## genmsg (lunar) - 0.5.8-0
 
 The packages in the `genmsg` repository were released into the `lunar` distro by running `/usr/bin/bloom-release -r lunar -t lunar genmsg` on `Thu, 16 Feb 2017 18:04:23 -0000`
