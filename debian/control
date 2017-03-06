@@ -1,0 +1,12 @@
+Source: ros-jade-genmsg
+Section: misc
+Priority: extra
+Maintainer: Dirk Thomas <dthomas@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-jade-catkin (>= 0.5.74)
+Homepage: http://www.ros.org/wiki/genmsg
+Standards-Version: 3.9.2
+
+Package: ros-jade-genmsg
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jade-catkin
+Description: Standalone Python library for generating ROS message and service data structures for various languages.
