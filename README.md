@@ -1,3 +1,26 @@
+## genmsg (lunar) - 0.5.10-0
+
+The packages in the `genmsg` repository were released into the `lunar` distro by running `/usr/bin/bloom-release -r lunar -t lunar genmsg` on `Mon, 05 Feb 2018 19:39:13 -0000`
+
+The `genmsg` package was released.
+
+Version of package(s) in repository `genmsg`:
+
+- upstream repository: git@github.com:ros/genmsg.git
+- release repository: https://github.com/ros-gbp/genmsg-release.git
+- rosdistro version: `0.5.9-0`
+- old version: `0.5.9-0`
+- new version: `0.5.10-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.2`
+- catkin_pkg version: `0.4.1`
+- rosdep version: `0.11.8`
+- rosdistro version: `0.6.6`
+- vcstools version: `0.1.40`
+
+
 ## genmsg (melodic) - 0.5.10-0
 
 The packages in the `genmsg` repository were released into the `melodic` distro by running `/usr/bin/bloom-release -r melodic -t melodic genmsg` on `Thu, 25 Jan 2018 17:20:05 -0000`
