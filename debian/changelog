@@ -1,0 +1,151 @@
+ros-kinetic-genmsg (0.5.11-0xenial) xenial; urgency=high
+
+  * use ast.literal_eval instead of eval (#73 <https://github.com/ros/genmsg/issues/73>)
+  * fix undefined name in case of exception (#75 <https://github.com/ros/genmsg/issues/75>)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Tue, 01 May 2018 07:00:00 -0000
+
+ros-kinetic-genmsg (0.5.10-0xenial) xenial; urgency=high
+
+  * add architecture_independent flag (#71 <https://github.com/ros/genmsg/issues/71>)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Thu, 25 Jan 2018 08:00:00 -0000
+
+ros-kinetic-genmsg (0.5.9-0xenial) xenial; urgency=high
+
+  * API improvements for use by client code (#70 <https://github.com/ros/genmsg/issues/70>)
+  * fix test: full_name is not optional (#69 <https://github.com/ros/genmsg/issues/69>)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Thu, 27 Jul 2017 07:00:00 -0000
+
+ros-kinetic-genmsg (0.5.8-0xenial) xenial; urgency=high
+
+  * check target across package for existance (#65 <https://github.com/ros/genmsg/issues/65>)
+  * do not hardcode errno values (#64 <https://github.com/ros/genmsg/issues/64>)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Fri, 02 Sep 2016 07:00:00 -0000
+
+ros-kinetic-genmsg (0.5.7-0xenial) xenial; urgency=high
+
+  * find_package(catkin) and add run dependency on catkin (#61 <https://github.com/ros/genmsg/issues/61>)
+  * improve readability of error message
+  * fix doc for BASE_DIR in add_*_files (#59 <https://github.com/ros/genmsg/issues/59>)
+  * fix some more minor typos (#56 <https://github.com/ros/genmsg/issues/56>, #57 <https://github.com/ros/genmsg/issues/57>)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Fri, 04 Mar 2016 08:00:00 -0000
+
+ros-kinetic-genmsg (0.5.6-0xenial) xenial; urgency=high
+
+  * fix interpreter globals collision with multiple message templates or modules (#53 <https://github.com/ros/genmsg/issues/53>)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Mon, 13 Oct 2014 07:00:00 -0000
+
+ros-kinetic-genmsg (0.5.5-0xenial) xenial; urgency=high
+
+  * fix CMake syntax (#52 <https://github.com/ros/genmsg/issues/52>) (regression of 0.5.4)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Mon, 18 Aug 2014 07:00:00 -0000
+
+ros-kinetic-genmsg (0.5.4-0xenial) xenial; urgency=high
+
+  * allow DIRECTORY argument to be an absolute path (#51 <https://github.com/ros/genmsg/issues/51>)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Mon, 18 Aug 2014 07:00:00 -0000
+
+ros-kinetic-genmsg (0.5.3-0xenial) xenial; urgency=high
+
+  * escape messages to avoid CMake warning (#49 <https://github.com/ros/genmsg/issues/49>)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Thu, 10 Jul 2014 07:00:00 -0000
+
+ros-kinetic-genmsg (0.5.2-0xenial) xenial; urgency=high
+
+  * refactor to generate pkg-msg-paths.cmake via configure_file() instead of empy (#43 <https://github.com/ros/genmsg/issues/43>)
+  * fix python 3 compatibility (#45 <https://github.com/ros/genmsg/issues/45>)
+  * remove debug message introduced in 0.5.1 (#42 <https://github.com/ros/genmsg/issues/42>)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Wed, 07 May 2014 07:00:00 -0000
+
+ros-kinetic-genmsg (0.5.1-0xenial) xenial; urgency=high
+
+  * add check for changed message dependencies (#41 <https://github.com/ros/genmsg/issues/41>)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Tue, 04 Mar 2014 08:00:00 -0000
+
+ros-kinetic-genmsg (0.5.0-0xenial) xenial; urgency=high
+
+  * remove usage of debug_message() (#40 <https://github.com/ros/genmsg/issues/40>)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Tue, 25 Feb 2014 08:00:00 -0000
+
+ros-kinetic-genmsg (0.4.24-0xenial) xenial; urgency=high
+
+  * python 3 compatibility (#36 <https://github.com/ros/genmsg/issues/36>, #37 <https://github.com/ros/genmsg/issues/37>)
+  * add support for ROS_LANG_DISABLE env variable (ros/ros#39 <https://github.com/ros/ros/issues/39>)
+  * fix installation of __init__.py from devel space (#38 <https://github.com/ros/genmsg/issues/38>)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Tue, 07 Jan 2014 08:00:00 -0000
+
+ros-kinetic-genmsg (0.4.23-0xenial) xenial; urgency=high
+
+  * fix installation of __init__.py file for packages where name differs from project name (#34 <https://github.com/ros/genmsg/issues/34>)
+  * rename variable 'config' to not collide with global variable (#33 <https://github.com/ros/genmsg/issues/33>)
+  * fix service files variable to only contain package relative paths (#32 <https://github.com/ros/genmsg/issues/32>)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Tue, 17 Sep 2013 07:00:00 -0000
+
+ros-kinetic-genmsg (0.4.22-0xenial) xenial; urgency=high
+
+  * make genmsg relocatable (ros/catkin#490 <https://github.com/ros/catkin/issues/490>)
+  * add warning in case generate_messages() is invoked without any messages and services (#31 <https://github.com/ros/genmsg/issues/31>)
+  * check if files have been generated before trying to install them (#31 <https://github.com/ros/genmsg/issues/31>)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Wed, 21 Aug 2013 07:00:00 -0000
+
+ros-kinetic-genmsg (0.4.21-0xenial) xenial; urgency=high
+
+  * check for CATKIN_ENABLE_TESTING to enable configure without tests
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Wed, 03 Jul 2013 07:00:00 -0000
+
+ros-kinetic-genmsg (0.4.20-0xenial) xenial; urgency=high
+
+  * generate pkg config extra files containing variables which list all message and service files (#28 <https://github.com/ros/genmsg/issues/28>)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Tue, 18 Jun 2013 07:00:00 -0000
+
+ros-kinetic-genmsg (0.4.19-0xenial) xenial; urgency=high
+
+  * improve error message for missing message dependencies (#1 <https://github.com/ros/genmsg/issues/1>)
+  * fix generating duplicate include dirs for multiple add_message_files() invocations which broke generated lisp messages (#27 <https://github.com/ros/genmsg/issues/27>)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Thu, 06 Jun 2013 07:00:00 -0000
+
+ros-kinetic-genmsg (0.4.18-0xenial) xenial; urgency=high
+
+  * fix handling spaces in folder names (ros/catkin#375 <https://github.com/ros/catkin/issues/375>)
+  * add targets with _generate_messages_LANG suffix (#20 <https://github.com/ros/genmsg/issues/20>)
+  * pass all message generation target to EXPORTED_TARGETS (#26 <https://github.com/ros/genmsg/issues/26>)
+  * improve error messages (#22 <https://github.com/ros/genmsg/issues/22>)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Fri, 08 Mar 2013 08:00:00 -0000
+
+ros-kinetic-genmsg (0.4.17-0xenial) xenial; urgency=high
+
+  * fix bug using ARGV in list(FIND) directly (#18 <https://github.com/ros/genmsg/issues/18>)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Sat, 19 Jan 2013 08:00:00 -0000
+
+ros-kinetic-genmsg (0.4.16-0xenial) xenial; urgency=high
+
+  * hide transitive message dependencies and pull them in automatically (#15 <https://github.com/ros/genmsg/issues/15>)
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Sun, 13 Jan 2013 08:00:00 -0000
+
+ros-kinetic-genmsg (0.4.15-0xenial) xenial; urgency=high
+
+  * first public release for Groovy
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Fri, 21 Dec 2012 08:00:00 -0000
+
+
