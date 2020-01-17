@@ -2,6 +2,10 @@
 Changelog for package genmsg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.5.14 (2020-01-17)
+-------------------
+* switch to setuptools, add add buildtool depend on setuptools (`#90 <https://github.com/ros/genmsg/issues/90>`_)
+
 0.5.13 (2020-01-16)
 -------------------
 * fix escape sequences (`#89 <https://github.com/ros/genmsg/issues/89>`_)
