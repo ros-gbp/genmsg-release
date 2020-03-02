@@ -2,6 +2,20 @@
 Changelog for package genmsg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.5.15 (2020-03-02)
+-------------------
+* bump CMake minimum version to use new behavior of CMP0048 (`#91 <https://github.com/ros/genmsg/issues/91>`_)
+
+0.5.14 (2020-01-17)
+-------------------
+* switch to setuptools, add add buildtool depend on setuptools (`#90 <https://github.com/ros/genmsg/issues/90>`_)
+
+0.5.13 (2020-01-16)
+-------------------
+* fix escape sequences (`#89 <https://github.com/ros/genmsg/issues/89>`_)
+* Python 3 compatibility (`#86 <https://github.com/ros/genmsg/issues/86>`_)
+* improve MsgNotFound exception information
+
 0.5.12 (2019-03-04)
 -------------------
 * add missing run_depend on empy (`#81 <https://github.com/ros/genmsg/issues/81>`_)
