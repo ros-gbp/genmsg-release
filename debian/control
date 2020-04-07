@@ -1,0 +1,12 @@
+Source: ros-noetic-genmsg
+Section: misc
+Priority: optional
+Maintainer: Dirk Thomas <dthomas@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), python3-setuptools, ros-noetic-catkin (>= 0.5.74)
+Homepage: http://wiki.ros.org/genmsg
+Standards-Version: 3.9.2
+
+Package: ros-noetic-genmsg
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-empy, ros-noetic-catkin
+Description: Standalone Python library for generating ROS message and service data structures for various languages.
