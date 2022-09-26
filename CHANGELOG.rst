@@ -2,6 +2,11 @@
 Changelog for package genmsg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.0 (2022-09-25)
+------------------
+* Properly escape path before using in regex (`#95 <https://github.com/ros/genmsg/issues/95>`_)
+* Contributors: Kyle Fazzari
+
 0.5.16 (2020-04-06)
 -------------------
 * fix comment handling in service spec string constants (`#92 <https://github.com/ros/genmsg/issues/92>`_)
