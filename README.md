@@ -1,3 +1,26 @@
+## genmsg (noetic) - 0.6.1-1
+
+The packages in the `genmsg` repository were released into the `noetic` distro by running `/usr/bin/bloom-release -r noetic genmsg` on `Thu, 10 Apr 2025 18:56:18 -0000`
+
+The `genmsg` package was released.
+
+Version of package(s) in repository `genmsg`:
+
+- upstream repository: git@github.com:ros/genmsg.git
+- release repository: https://github.com/ros-gbp/genmsg-release.git
+- rosdistro version: `0.6.0-1`
+- old version: `0.6.0-1`
+- new version: `0.6.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## genmsg (noetic) - 0.6.0-1
 
 The packages in the `genmsg` repository were released into the `noetic` distro by running `/usr/bin/bloom-release --track noetic --rosdistro noetic genmsg -e` on `Mon, 26 Sep 2022 00:54:58 -0000`
